@@ -1,0 +1,23 @@
+<md-tab-group>
+  <md-tab label="Gallery">
+    <div class="dashboard" layout="row"  layout-align="center center">
+      <md-card *ngFor="let pic of pics; let i = index" layout-align="center center">
+        <!--<img md-card-image src="{{ pic.img }}">-->
+          <md-card-content>
+            <p>{{ pic.description }}</p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button (click)="likeMe(i)">
+                <i class="material-icons md-18" [class.red-color]="pic.liked == '1'">favorite</i> LIKE
+            </button>
+            <button md-button (click)="deleteMe(i)">
+                <i class="material-icons md-18">delete</i> DELETE 
+            </button>
+          </md-card-actions>
+      </md-card>
+    </div>
+  </md-tab>
+  <md-tab label="Settings">
+
+  </md-tab>
+</md-tab-group>

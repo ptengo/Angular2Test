@@ -1,0 +1,34 @@
+<md-sidenav-container class="demo-sidenav-container">
+<md-sidenav #sidenav mode="side" opened="false" class="sidenav">
+    <ul #list>
+      <li>Perfil</li>
+      <li>Tumadre</li>
+      <li>Buladrien</li>
+    </ul>
+</md-sidenav>
+
+  <md-toolbar color="primary">
+    <button md-button class="example-fab" (click)="sidenav.toggle()">
+        <md-icon>menu</md-icon>
+      </button>
+      <span>Buladre</span>
+      <span class="spacer"></span>
+      <button md-icon-button [mdMenuTriggerFor]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item>
+          <md-icon>fingerprint</md-icon>
+          <span>Login</span>
+        </button>
+        <button md-menu-item disabled>
+          <md-icon>announcement</md-icon>
+          <span>Issues</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>notifications_off</md-icon>
+          <span>Disable alerts</span>
+        </button>
+      </md-menu>
+  </md-toolbar>
+</md-sidenav-container>
