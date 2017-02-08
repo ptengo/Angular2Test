@@ -1,21 +1,13 @@
-<md-toolbar color="primary">
-    <span>GameViewer</span>
-    <span class="spacer"></span>
-    <button md-icon-button [mdMenuTriggerFor]="menu">
-      <md-icon>more_vert</md-icon>
-    </button>
-    <md-menu #menu="mdMenu">
-      <button md-menu-item>
-        <md-icon>fingerprint</md-icon>
-        <span>Login</span>
-      </button>
-      <button md-menu-item disabled>
-        <md-icon>announcement</md-icon>
-        <span>Issues</span>
-      </button>
-      <button md-menu-item>
-        <md-icon>notifications_off</md-icon>
-        <span>Disable alerts</span>
-      </button>
-    </md-menu>
-</md-toolbar>
+<md-sidenav-layout>
+    <md-sidenav #start (open)="mybutton.focus()">
+      Start Sidenav.
+      <br>
+      <button md-button #mybutton (click)="start.close()">Close</button>
+    </md-sidenav>
+    <md-sidenav #end align="end">
+      End Sidenav.
+      <button md-button (click)="end.close()">Close</button>
+    </md-sidenav>
+ 
+    My regular content. This will be moved into the proper DOM at runtime.
+  </md-sidenav-layout>
