@@ -1,13 +1,67 @@
+
+
 <md-sidenav-layout>
-    <md-sidenav #start (open)="mybutton.focus()">
-      Start Sidenav.
-      <br>
-      <button md-button #mybutton (click)="start.close()">Close</button>
-    </md-sidenav>
-    <md-sidenav #end align="end">
-      End Sidenav.
-      <button md-button (click)="end.close()">Close</button>
-    </md-sidenav>
- 
-    My regular content. This will be moved into the proper DOM at runtime.
-  </md-sidenav-layout>
+  <md-sidenav #sidenav mode="side" opened="false" class="sidenav">
+    <ul #list>
+      <li>Perfil</li>
+      <li>Tumadre</li>
+      <li>Buladrien</li>
+    </ul>
+  </md-sidenav>
+
+<md-toolbar color="primary">
+  
+  <button md-button class="example-fab" (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <span>Buladre</span>
+    <span class="spacer"></span>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>
+        <md-icon>fingerprint</md-icon>
+        <span>Login</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>announcement</md-icon>
+        <span>Issues</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>
+    </md-menu>
+</md-toolbar>
+  
+<md-tab-group>
+  <md-tab label="Gallery">
+    <div class="dashboard" layout="row"  layout-align="center center">
+      
+        <md-card *ngFor="let pic of pics; let i = index" layout-align="center center">
+          <!--<img md-card-image src="{{ pic.img }}">-->
+        
+          
+            <md-card-content>
+              <p>{{ pic.description }}</p>
+            </md-card-content>
+            <md-card-actions>
+              <button md-button (click)="likeMe(i)">
+                  <i class="material-icons md-18" [class.red-color]="pic.liked == '1'">favorite</i> LIKE
+              </button>
+              <button md-button (click)="deleteMe(i)">
+                  <i class="material-icons md-18">delete</i> DELETE 
+              </button>
+            </md-card-actions>
+          
+        </md-card>
+      
+    </div>
+  </md-tab>
+  <md-tab label="Settings">
+
+  </md-tab>
+</md-tab-group>
+</md-sidenav-layout>
+
