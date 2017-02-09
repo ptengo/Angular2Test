@@ -12,8 +12,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(private http:Http) {
     
-    this.http.get('./data.json')
-      .map(response => response.json().screenshots)
+    this.http.get('./datahome.json')
+      .map(response => response.json().dates)
       .subscribe(res => this.pics = res);
 
   }

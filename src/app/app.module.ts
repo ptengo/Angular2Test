@@ -4,22 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
+import { RoutingModule } from './routing.module';
 import 'hammerjs';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PreferencesComponent } from './components/preferences/preferences.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
     ToolbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    PreferencesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RoutingModule,
     MaterialModule.forRoot()
   ],
   providers: [],

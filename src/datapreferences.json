@@ -1,0 +1,13 @@
+{
+  "preferences": [
+      {
+        "name": "Sport"
+      },
+      {
+        "name": "Music"
+      },
+      {
+        "name": "Party"
+      }
+  ]
+}

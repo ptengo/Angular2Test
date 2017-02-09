@@ -1,17 +1,26 @@
-<md-sidenav-container class="demo-sidenav-container">
-<md-sidenav #sidenav mode="side" opened="false" class="sidenav">
-    <ul #list>
-      <li>Perfil</li>
-      <li>Tumadre</li>
-      <li>Buladrien</li>
-    </ul>
-</md-sidenav>
+<md-sidenav-container class="demo-sidenav-container" fullscreen>
+  <md-sidenav #start class="sidenav">
 
-  <md-toolbar color="primary">
-    <button md-button class="example-fab" (click)="sidenav.toggle()">
+    
+      <md-card class="userProfile">
+        <md-card-content class="profileContent">
+          <p>UserProfile<p>
+        </md-card-content>
+      </md-card>
+    
+    
+    <md-nav-list class="routesList">
+      <a md-list-item routerLink="/home" routerLinkActive="active">Home</a>
+      <a md-list-item routerLink="/preferences" routerLinkActive="active">Preferences</a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <md-toolbar class="toolbar">
+    <button md-icon-button class="example-fab" (click)="start.open()">
         <md-icon>menu</md-icon>
       </button>
-      <span>Buladre</span>
+      
+      <span>Ferstdates</span>
       <span class="spacer"></span>
       <button md-icon-button [mdMenuTriggerFor]="menu">
         <md-icon>more_vert</md-icon>
