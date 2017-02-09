@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import {SidenavComponent} from './components/sidenav/sidenav.component';
 import {ToolbarComponent} from './components/toolbar/toolbar.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 @Component({
