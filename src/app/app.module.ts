@@ -10,13 +10,15 @@ import 'hammerjs';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PreferencesComponent } from './components/preferences/preferences.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     DashboardComponent,
-    PreferencesComponent
+    PreferencesComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

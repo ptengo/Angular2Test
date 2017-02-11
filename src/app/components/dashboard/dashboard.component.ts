@@ -7,17 +7,25 @@ import {Http} from '@angular/http';
 })
 export class DashboardComponent implements OnInit {
 
-  pics: Array<any>;
-
+  chats: Array<any>;
+  showChat = false;
 
   constructor(private http:Http) {
     
     this.http.get('./datahome.json')
       .map(response => response.json().dates)
-      .subscribe(res => this.pics = res);
+      .subscribe(res => this.chats = res);
 
   }
   ngOnInit() {
+  }
+
+  /*toggleChat() {
+    this.showChat = !this.showChat;
+  }*/
+
+  chatMood(event) {
+    this.showChat = event;
   }
 
 }
