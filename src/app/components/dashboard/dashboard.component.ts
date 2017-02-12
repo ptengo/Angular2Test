@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, trigger, transition, style, animate } from '@angular/core';
 import {Http} from '@angular/http';
+import { customTransition } from '../../animations/transition.animation';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  animations: [customTransition()]
 })
 export class DashboardComponent implements OnInit {
 
