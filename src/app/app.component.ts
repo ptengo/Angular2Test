@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, HostBinding } from '@angular/core';
 import {ToolbarComponent} from './components/toolbar/toolbar.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import { customTransition } from './animations/transition.animation';
@@ -12,5 +12,6 @@ import { customTransition } from './animations/transition.animation';
 })
 export class AppComponent {
  
- 
+ @HostBinding('@customTransition') customTransition = true;
+
 }
