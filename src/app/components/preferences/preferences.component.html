@@ -4,7 +4,9 @@
   
     <md-card>
       <h1>Preferences</h1>
-      <div *ngFor="let pic of pics; let i = index" layout-align="center center">
+    </md-card>
+      
+      <md-card *ngFor="let pic of pics; let i = index" layout-align="center center">
         <!--<img md-card-image src="{{ pic.img }}">-->
           <md-card-content>
             <p>{{ pic.name }}</p>
@@ -17,6 +19,5 @@
                 <i class="material-icons md-18">delete</i> DELETE 
             </button>
           </md-card-actions>
-      </div>
-     </md-card>
+      </md-card>
 </div>
