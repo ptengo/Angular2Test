@@ -7,7 +7,6 @@ import { customTransition } from './animations/transition.animation';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [customTransition()],
-  host: {'[@customTransition]': ''},
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {

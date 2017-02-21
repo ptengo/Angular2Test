@@ -11,6 +11,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PreferencesComponent } from './components/preferences/preferences.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { DatesComponent } from './components/dates/dates.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import { ChatComponent } from './components/chat/chat.component';
     ToolbarComponent,
     DashboardComponent,
     PreferencesComponent,
-    ChatComponent
+    ChatComponent,
+    DatesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RoutingModule,
+    //RoutingModule, DESCOMENTAR PER AFEGIR ROUTING
     MaterialModule.forRoot()
   ],
   providers: [],

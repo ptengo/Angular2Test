@@ -1,0 +1,16 @@
+.dates-card {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    height: 360px;
+}
+.mdl-card__actions {
+    height: 40%;
+}
+
+.dates-card .mdl-buttonNew {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
