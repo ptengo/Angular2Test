@@ -11,3 +11,39 @@
     left: 508px;
     position: absolute;
 }
+
+.dateProfile {
+    height: 15%;
+    left: 50%;
+}
+
+.profile {
+    top: 5%;
+    left: 80%;
+    position: absolute;
+}
+
+.textContainer {
+    padding: 10%;
+    height: 70%;
+}
+
+.sendButton {
+    position: absolute;
+    bottom: 1%;
+    left: 77%;
+}
+
+.mdl-textfield {
+    top: 20px;
+    
+  margin: 5px;
+}
+
+.chatContainer{
+    position: absolute;
+    top: 30%;
+    width: 400px;
+    height: 360px;
+    left: 53%;
+}
